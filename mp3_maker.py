@@ -1,5 +1,7 @@
 import requests, base64, random, argparse, os, playsound, time, re, textwrap
 
+from web_scrape import fullPost
+
 # https://twitter.com/scanlime/status/1512598559769702406
 
 voices = [
