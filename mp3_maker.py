@@ -154,9 +154,11 @@ def main():
 
     i = 0
     for text in textSections:
+        # p0.mp3 | p1.mp3 ...
         filename = 'p' + i + '.mp3'
         req_text = text
         tts(text_speaker, req_text, filename)
+        i += 1
 
     '''if args.file is not None:
         req_text = open(args.file, 'r', errors='ignore', encoding='utf-8').read()
