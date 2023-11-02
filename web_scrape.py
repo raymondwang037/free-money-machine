@@ -35,8 +35,42 @@ class Post():
         self.chunks = self.post.split(".")
         for i in range(len(self.chunks)):
             self.chunks[i] = self.chunks[i].strip().replace("\n", "")
+
+class SubReddit:
+    def __init__(self, url, inHtml=False) -> None:
+        if not url:
+            self.title = ""
+            self.post = ""
+            self.fullText = ""
         
-    
-p = Post("aita.html", True)
-p.splitChunks()
-p.exportToText()
+        else:
+            self.fullText = open(url) if inHtml else (requests.get(url)).text
+            
+            soup = BeautifulSoup(self.fullText, 'html.parser')
+            
+
+            self.all_links = soup.find_all('a')
+
+            self.post_links = []
+
+            for link in self.all_links:
+                try:
+                    if (link['slot'] == 'full-post-link'):
+                        self.post_links.append(link['href'])
+                except KeyError:
+                    pass
+            
+            self.posts = []
+            for l in self.post_links:
+                self.posts.append(Post(l))
+            
+            for p in self.posts:
+                p.splitChunks()
+                p.exportToText()
+                    
+        
+r = SubReddit("Am I the Asshole .html", True)    
+
+# p = Post("aita.html", True)
+# p.splitChunks()
+# p.exportToText()
