@@ -136,6 +136,8 @@ def batch_create(filename: str = 'voice.mp3'):
 
     out.close()
 
+mp3_files = []
+
 def main():
     '''parser = argparse.ArgumentParser(description = "Simple Python script to interact with the TikTok TTS API")
     parser.add_argument("-v", "--voice", help = "the code of the desired voice")
@@ -158,6 +160,7 @@ def main():
         filename = 'p' + i + '.mp3'
         req_text = text
         tts(text_speaker, req_text, filename)
+        mp3_files.append(filename)
         i += 1
 
     '''if args.file is not None:
@@ -200,14 +203,6 @@ def main():
         return
 
     tts(text_speaker, req_text, filename, False)'''
-
-def sampler():
-    for item in voices:
-        text_speaker = item
-        filename = item
-        print(item)
-        req_text = 'TikTok Text To Speech Sample'
-        tts(text_speaker, req_text, filename)
 
 if __name__ == "__main__":
     main()
