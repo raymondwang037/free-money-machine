@@ -23,12 +23,11 @@ class Post():
 
             self.post = '\n'.join(pars)
     
-    def exportToText(self):
+    def export(self):
         f = open(self.title, "w")
         for chunk in self.chunks:
             f.write(chunk)
             f.write("\n----------\n")
-        # f.write(self.post)
         f.close()
     
     def splitChunks(self):
@@ -64,13 +63,7 @@ class SubReddit:
             for l in self.post_links:
                 self.posts.append(Post(l))
             
-            for p in self.posts:
+    def export(self):
+        for p in self.posts:
                 p.splitChunks()
-                p.exportToText()
-                    
-        
-r = SubReddit("Am I the Asshole .html", True)    
-
-# p = Post("aita.html", True)
-# p.splitChunks()
-# p.exportToText()
+                p.export()
