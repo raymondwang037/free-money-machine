@@ -137,17 +137,28 @@ def batch_create(filename: str = 'voice.mp3'):
     out.close()
 
 def main():
-    parser = argparse.ArgumentParser(description = "Simple Python script to interact with the TikTok TTS API")
+    '''parser = argparse.ArgumentParser(description = "Simple Python script to interact with the TikTok TTS API")
     parser.add_argument("-v", "--voice", help = "the code of the desired voice")
     parser.add_argument("-t", "--text", help = "the text to be read")
     parser.add_argument("-f", "--file", help = "use this if you wanna use 'text.txt'")
     parser.add_argument("-n", "--name", help = "The name for the output file (.mp3)")
     parser.add_argument("-p", "--play", action='store_true', help = "use this if you want to play your output")
-    args = parser.parse_args()
+    args = parser.parse_args()'''
 
-    text_speaker = args.voice
+    text_speaker = 'en_us_007'
 
-    if args.file is not None:
+    textSections = []
+    for i in range(0, len(fullPost), 200):
+        substring = fullPost[i:i + 200]
+        textSections.append(substring)
+
+    i = 0
+    for text in textSections:
+        filename = 'p' + i + '.mp3'
+        req_text = text
+        tts(text_speaker, req_text, filename)
+
+    '''if args.file is not None:
         req_text = open(args.file, 'r', errors='ignore', encoding='utf-8').read()
     else:
         if args.text == None:
@@ -162,9 +173,6 @@ def main():
     if args.voice == None:
         text_speaker = 'en_us_002'
         print('You need to have a voice! (See README.md)')
-
-    if text_speaker == "random":
-        text_speaker = randomvoice()
 
     if args.name is not None:
         filename = args.name
@@ -189,14 +197,7 @@ def main():
 
         return
 
-    tts(text_speaker, req_text, filename, play)
-
-
-def randomvoice():
-    count = random.randint(0, 15)
-    text_speaker = voices[count]
-
-    return text_speaker
+    tts(text_speaker, req_text, filename, False)'''
 
 def sampler():
     for item in voices:
