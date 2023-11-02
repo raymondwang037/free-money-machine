@@ -10,4 +10,4 @@ for i in range(0, len(mp3_files)):
     # TODO: add the subtitle thing
 
     filename = 'p' + i + '.mp4'
-    result.write_videofile(filename, fps=25)
+    video.write_videofile(filename)
