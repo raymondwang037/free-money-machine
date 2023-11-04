@@ -48,7 +48,7 @@ class Post():
 
         for chunk in self.chunks:
             f.write(chunk)
-            f.write("\n----------\n")
+            f.write("\n")
         f.close()
     
     # break larger post into individual sentences 

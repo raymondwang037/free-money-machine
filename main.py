@@ -1,5 +1,6 @@
 from web_scrape import Post, SubReddit
 import time
+import os
 
 SUB_REDDIT_URLS = [
     "https://www.reddit.com/r/AmItheAsshole/",
