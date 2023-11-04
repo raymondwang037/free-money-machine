@@ -3,6 +3,8 @@ import time
 
 from bs4 import BeautifulSoup
 
+POST_DIR = "./posts/"
+
 class Post():
     def __init__(self, url: str, inHtml=False) -> None:
         if not url:
@@ -17,7 +19,13 @@ class Post():
             soup = BeautifulSoup(self.fullText, 'html.parser')
 
             # find the title of the post
-            self.title = soup.find_all('shreddit-title')[0]['title'].split(":")[0].strip()
+            
+            titles = soup.find_all('shreddit-title')
+            if len(titles) < 1:
+                raise Exception()
+            else:
+                self.title = titles[0]['title'].split(":")[0].strip()
+ 
 
             # find the first item with the 'post' tag and create and array of all paragraphs in the post
             postChunks = soup.find_all('div', id=lambda x: x and 'post' in x)[0].find_all('p')
@@ -31,7 +39,13 @@ class Post():
     
     # write each sentence to a text file separated by line delimiter
     def export(self):
-        f = open(self.title, "w")
+        try:
+            print(POST_DIR + self.title)
+            f = open(POST_DIR + self.title, "w")
+        except Exception:
+            print("Unable to export: " + self.title)
+            return
+
         for chunk in self.chunks:
             f.write(chunk)
             f.write("\n----------\n")
@@ -58,6 +72,12 @@ class Post():
                 newChunks.append(chunk)
         
         self.chunks = newChunks
+    
+    # calls alls the functions needed to process and export post to text
+    def process(self):
+        self.splitChunks()
+        self.condenseChunks()
+        self.export()
 
 
 class SubReddit:
@@ -92,15 +112,16 @@ class SubReddit:
             self.posts = []
             for l in self.post_links:
                 time.sleep(1.5)
-                self.posts.append(Post(l))
+                try:
+                    self.posts.append(Post("https://www.reddit.com" + l))
+                
+                except Exception:
+                    print("Unable to generate post from " + l)
     
     # call export on all posts in the Subreddit object
     def export(self):
         for p in self.posts:
-                p.splitChunks()
-                p.export()
+                p.process()
 
 p = Post("aita.html", True)
-p.splitChunks()
-p.condenseChunks()
-p.export()
+p.process()
