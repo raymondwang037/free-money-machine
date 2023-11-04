@@ -5,6 +5,8 @@ from mp3_maker import mp3_files
 timeLimit = 60
 count = 0
 index = 0
+
+# go through the list and generate the videos until u run out of mp3 files
 while index < len(mp3_files):
     # list of AudioFlieCips from mp3_files
     audios = []
@@ -28,10 +30,6 @@ while index < len(mp3_files):
     # set the concatenated audio as the video audio
     video.audio = audio
 
-    # =============================
-    # TODO: add the subtitle thing
-    # =============================
-
     # crop video to fit the YouTube Short w/h ratio
     cropped = video.fx(vfx.crop, x1=video.w//3, x2=(video.w//3)*2)
 
@@ -39,3 +37,9 @@ while index < len(mp3_files):
     filename = 'p' + str(count) + '.mp4'
     cropped.write_videofile(filename)
     count += 1
+
+for i in range(0, count):
+    # =============================
+    # TODO: add the subtitle thing
+    # =============================
+    break
