@@ -1,4 +1,5 @@
 from web_scrape import Post, SubReddit
+import time
 
 SUB_REDDIT_URLS = [
     "https://www.reddit.com/r/AmItheAsshole/",
@@ -11,6 +12,7 @@ SUB_REDDIT_URLS = [
 def main():
     # PLEASE DO NOT UNCOMMENT AND RUN BEFORE SLEEP CALLS ARE ADDED TO AVOID IP BAN
     # for url in SUB_REDDIT_URLS:
+    #     time.sleep(2)
     #     subreddit = SubReddit(url)
     #     subreddit.export()
     pass

@@ -1,4 +1,5 @@
 import requests
+import time
 
 from bs4 import BeautifulSoup
 
@@ -90,6 +91,7 @@ class SubReddit:
             # create Post objects from links
             self.posts = []
             for l in self.post_links:
+                time.sleep(1.5)
                 self.posts.append(Post(l))
     
     # call export on all posts in the Subreddit object
