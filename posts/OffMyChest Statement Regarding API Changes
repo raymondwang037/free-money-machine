@@ -1,84 +1,42 @@
 OffMyChest is a support community and continuous availability is paramount. 
-----------
 OffMyChest will be open and available as usual through the Blackout protest officially beginning on June 12, 2023 for two days, and as long as we are reasonably able to. 
-----------
 Reddit's announced API changes adversely impact moderator ability to moderate, which threatens this community's safety and existence. The changes remove user choice and ability to access Reddit. 
-----------
 A "Blackout" is being organized to encourage Reddit to reconsider and salvage the situation before the July 1, 2023 changes. 
-----------
 Thousands of communities will shut down during that time, and many are opting to do so indefinitely. 
-----------
 OffMyChest moderators support this direct action in solidarity with thousands of unpaid volunteers, blind and visually impaired people, affected users, researchers, and all stakeholders. 
-----------
 We call for a 6-month minimum postponement with a scaled transitory and openly collaborative period before fully instituting the API changes, to ensure stakeholder issues are resolved. 
-----------
 Again, OffMyChest will remain open to provide support. If you have questions, please see our FAQ below with additional resources. Third party apps are being shut down or will shut down. 
-----------
 With 30 days notice of pricing there is not enough time for anyone to adjust accordingly. 
-----------
 Many tech companies like Google provide a significant "test drive" time period, with non-charged but real number billing so developers can adjust before getting truly billed. 
-----------
 While Reddit is not explicitly prohibiting third party apps, the situation is such none can be viable without an exemption. Many moderators use a third party app to moderate. 
-----------
 The official app is still catching up with desktop tools. If forced to use the official app, they will be completely unable to perform certain duties, and the workflow is slower. 
-----------
 Many moderators would quit, and those that stay behind would be forced to be less productive. It makes recruiting moderators much more difficult. Nearly all moderation tools use the API. 
-----------
 Reddit says there will be no impact but we will not know until it happens. It's not clear what new tools will face. 
-----------
 If it's not adopted quickly and widely enough, will it be granted access or ignored?      Moderation tools fight spam, scammers, child sexual abusers, and more. 
-----------
 If those tools break, users will be directly affected. Third-party user tools will be impacted. For example, many user data backup and deletion use the API. 
-----------
 Sites that show statistics will be severely restricted. Reddit Enhancement Suite doesn't use the API but may still be impacted. 
-----------
 Blind and visually impaired users depend on third party apps because the official IOS app is not sufficiently accessible. 
-----------
 These users also depend on captions provided by captioners that depend on the API. This is not the only action Reddit moderators and users can make. 
-----------
 This quantifiably shows how many people are stakeholders and are not being considered seriously. This action has created a coalition of people who can quickly reach a consensus on further action. 
-----------
 It is clear that Reddit is not fully considering existing users and moderators as a significant stakeholder. Reddit expects them to be replaced by new users. 
-----------
 In the future, when Reddit does something to drive you away, you can't achieve anything if we do nothing now. It will be inherently second-class. Users will not have access to NSFW content. 
-----------
 The app will have to respect slow rate limits as all users of the app will be aggregated as one. If the app becomes popular, it will exceed those rate limits and enter the paid tier. 
-----------
 How can a non-commercial app pay for API pricing if it can't accept funding?      Users without a Reddit account will not be able to access Reddit at all. 
-----------
 They'll need to create an account via some other means. Not all users are technically skilled enough to get one. It will be slow. 
-----------
 The API change encourages OAuth with a rate of 100 requests per minute. Client/secret has a rate of 10 per minute. Client/secret gives 100% control of the account to whoever has it. 
-----------
 It is major a security issue, while OAuth is considered more secure. Reddit Developer Terms, 3. 
-----------
 1: Access Info seems to prohibit this: "You may not share your Access Info with any other third party without Reddit’s permission, and you will keep your Access Info secure at all times. 
-----------
 "  It is simply nowhere near ready to be able to replace existing tools. In fact, it's not clear if it could ever replace existing tools. Contact Reddit privately and publicly. 
-----------
 Tag them on other platforms and talk about how it will affect you and people you care about. Submit a Reddit help request (suggested: "Other Help"). 
-----------
 @Reddit on Twitter    Use hashtag: #RedditBlackout    Support other communities' protest announcements posts. If a community is not participating do not bother them. Protest must be done willingly. 
-----------
 Learn what you can do in r/Save3rdPartyApps. During the Blackout try not to visit Reddit or consume or produce Reddit content and limit your usage to responsible necessity. 
-----------
 That matters more than communities shutting down. https://save3rdpartyapps. com/https://www. twitch. tv/reddark_247 (livestream)  Deleting your account does not delete your content. 
-----------
 Your posts, comments, votes, etc. . will remain on the platform. 
-----------
 When you created your account you agreed to grant Reddit:      a worldwide, royalty-free, perpetual, irrevocable, non-exclusive, transferable, and sublicensable license to use, copy, modify, adapt, prepare derivative works of, distribute, store, perform, and display Your Content and any name, username, voice, or likeness provided in connection with Your Content in all media formats and channels now known or later developed anywhere in the world. 
-----------
 This license includes the right for us to make Your Content available for syndication, broadcast, distribution, or publication by other companies, organizations, or individuals who partner with Reddit. 
-----------
 You also agree that we may remove metadata associated with Your Content, and you irrevocably waive any claims and assertions of moral rights or attribution with respect to Your Content. 
-----------
 If you want to delete your content, it is not possible to easily access all your data through the website UI or any browser script or extension. 
-----------
 For a truly thorough cleaning, request your data from Reddit to get all links. 
-----------
 Once you have this, you can use Power Delete Suite or Redact app to automatically overwrite and delete posts and comments, and follow up with your list for anything they missed. 
-----------
 Then you can delete your account from your account settings. Note it may take up to 90 days for data to be removed from Reddit, and Reddit must keep some data for legal purposes. 
-----------
 Additionally, search engines/web crawlers/archivers may have copies. Addressing that is beyond the scope of this post. 
-----------
