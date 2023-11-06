@@ -1,7 +1,5 @@
 import requests, base64, random, argparse, os, playsound, time, re, textwrap
 
-from web_scrape import fullPost
-
 # https://twitter.com/scanlime/status/1512598559769702406
 
 voices = [
@@ -139,31 +137,15 @@ def batch_create(filename: str = 'voice.mp3'):
 mp3_files = []
 
 def main():
-    '''parser = argparse.ArgumentParser(description = "Simple Python script to interact with the TikTok TTS API")
+    parser = argparse.ArgumentParser(description = "Simple Python script to interact with the TikTok TTS API")
     parser.add_argument("-v", "--voice", help = "the code of the desired voice")
     parser.add_argument("-t", "--text", help = "the text to be read")
     parser.add_argument("-f", "--file", help = "use this if you wanna use 'text.txt'")
     parser.add_argument("-n", "--name", help = "The name for the output file (.mp3)")
     parser.add_argument("-p", "--play", action='store_true', help = "use this if you want to play your output")
-    args = parser.parse_args()'''
+    args = parser.parse_args()
 
-    text_speaker = 'en_us_007'
-
-    textSections = []
-    for i in range(0, len(fullPost), 200):
-        substring = fullPost[i:i + 200]
-        textSections.append(substring)
-
-    i = 0
-    for text in textSections:
-        # p0.mp3 | p1.mp3 ...
-        filename = 'p' + i + '.mp3'
-        req_text = text
-        tts(text_speaker, req_text, filename)
-        mp3_files.append(filename)
-        i += 1
-
-    '''if args.file is not None:
+    if args.file is not None:
         req_text = open(args.file, 'r', errors='ignore', encoding='utf-8').read()
     else:
         if args.text == None:
@@ -202,7 +184,7 @@ def main():
 
         return
 
-    tts(text_speaker, req_text, filename, False)'''
+    tts(text_speaker, req_text, filename, False)
 
 if __name__ == "__main__":
     main()
