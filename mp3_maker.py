@@ -152,7 +152,7 @@ def main():
             req_text = 'TikTok Text To Speech'
             print('You need to have one form of text! (See README.md)')
         else:
-            req_text = fullPost #args.text
+            req_text = args.text
 
     if args.play is not None:
         play = args.play
