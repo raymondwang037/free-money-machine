@@ -1,7 +1,8 @@
 from moviepy.editor import *
 import os
 
-def export(mp3_files):
+def export(file):
+    mp3_files = [file]
     timeLimit = 60
     count = 0
     index = 0
