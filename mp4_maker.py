@@ -1,4 +1,5 @@
 from moviepy.editor import *
+import os
 
 def export(mp3_files):
     timeLimit = 60
@@ -38,7 +39,9 @@ def export(mp3_files):
         count += 1
 
     for i in range(0, count):
-        # =============================
-        # TODO: generate the subtited videos
-        # =============================
+        #===============================================================
+        # type the subtitle command for each mp4 file that was generated
+        #===============================================================
+        filename = 'p' + str(count) + '.mp4'
+        os.system("auto_subtitle " + filename + " -o subtitled/")
         break
