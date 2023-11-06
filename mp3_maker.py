@@ -20,7 +20,7 @@ def mp3(txt_path):
 
         b64d = base64.b64decode(vstr)
 
-        out = open("{txtfile}.mp3".format(txtfile=txt_path), "a+")
+        out = open("{txtfile}.mp3".format(txtfile=txt_path), "ab+")
         out.write(b64d)
         out.close()
 

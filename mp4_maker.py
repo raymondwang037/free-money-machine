@@ -1,8 +1,9 @@
 from moviepy.editor import *
 import os
 
-def export(file):
+def export(cwd, file):
     mp3_files = [file]
+
     timeLimit = 60
     count = 0
     index = 0
@@ -15,7 +16,7 @@ def export(file):
         # add the audio to the list until right before it exceeds the timeLimit
         duration = 0
         for i in range(index, len(mp3_files)):
-            curr = AudioFileClip(mp3_files[i])
+            curr = AudioFileClip(cwd + mp3_files[i])
             if duration + curr.duration > timeLimit:
                 break
             duration += curr.duration
