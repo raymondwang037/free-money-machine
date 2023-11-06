@@ -67,7 +67,7 @@ class Post():
                 newChunks[-1] += ". "
             
             # if sentences can be merged do so, otherwise start new sentence
-            if len(newChunks[-1]) + len(chunk) + 2 <= 200:
+            if len(newChunks[-1]) + len(chunk) + 2 <= 300:
                 newChunks[-1] += chunk
             else:
                 newChunks.append(chunk)
