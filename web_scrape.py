@@ -40,8 +40,9 @@ class Post():
     # write each sentence to a text file separated by line delimiter
     def export(self):
         try:
-            print(POST_DIR + self.title)
-            f = open(POST_DIR + self.title, "w")
+            temp_str = ''.join(filter(lambda x : x.isalnum(), self.title))
+            print(POST_DIR + temp_str + ".txt")
+            f = open(POST_DIR + temp_str + ".txt", "w")
         except Exception:
             print("Unable to export: " + self.title)
             return

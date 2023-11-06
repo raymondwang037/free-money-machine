@@ -1,4 +1,5 @@
 from web_scrape import Post, SubReddit
+import mp3_maker
 import time
 import os
 
@@ -21,9 +22,8 @@ def main():
     posts_path = os.getcwd() + "/posts"
     posts_list = os.listdir(posts_path)
 
-    c = 0
     for e in posts_list:
-        os.system("python3 mp3_maker.py -v en_us_001 -f " +  posts_path + "/" + e + " -n " + e + ".mp3")
+        mp3_maker.mp3(posts_path + "/" + e)
 
 if __name__ == "__main__":
     main()
