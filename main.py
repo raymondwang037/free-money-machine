@@ -14,21 +14,21 @@ SUB_REDDIT_URLS = [
 
 
 def main():
-    # DO NOT UNCOMMENT UNTIL ITS READY TO RUN
-    # for url in SUB_REDDIT_URLS:
-    #     time.sleep(random.randint(1,3))
-    #     subreddit = SubReddit(url)
-    #     subreddit.export()
-    # # pass
+    #DO NOT UNCOMMENT UNTIL ITS READY TO RUN
+    for url in SUB_REDDIT_URLS:
+        time.sleep(random.randint(1,3))
+        subreddit = SubReddit(url)
+        subreddit.export()
+    # pass
 
-    # posts_path = os.getcwd() + "/posts"
-    # posts_list = os.listdir(posts_path)
+    posts_path = os.getcwd() + "/posts"
+    posts_list = os.listdir(posts_path)
 
-    # for e in posts_list:
-    #     print(e)
-    #     mp3_maker.mp3(posts_path + "/" + e)
+    for e in posts_list:
+        print(e)
+        mp3_maker.mp3(posts_path + "/" + e)
 
-    mp4_maker.export(os.getcwd() + "/mp3_files/" ,os.listdir(os.getcwd() + "/mp3_files"))
+    mp4_maker.export(os.getcwd(), os.listdir(os.getcwd() + "/mp3_files"))
 
 if __name__ == "__main__":
     main()
