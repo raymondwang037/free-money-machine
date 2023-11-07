@@ -62,8 +62,8 @@ def main():
         video = ffmpeg.input(path)
         audio = video.audio
 
-        ffmpeg.concat(
-            video.filter('subtitles', srt_path, force_style="OutlineColour=&H4FF00000,BorderStyle=2"), audio, v=1, a=1
+        ffmpeg.concat(# change the y position of the subtitles
+            video.filter('subtitles', srt_path, force_style="FontName=Impact,OutlineColour=&H4FF0000,BorderStyle=2,MarginV=150"), audio, v=1, a=1
         ).output(out_path).run(quiet=True, overwrite_output=True)
 
         print(f"Saved subtitled video to {os.path.abspath(out_path)}.")
